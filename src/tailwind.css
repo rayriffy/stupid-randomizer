@@ -1,0 +1,12 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.box {
+  width: 1200px;
+  height: 800px;
+  /* border: 1px solid black; */
+  position: absolute;
+  top: 0;
+  left: 0;
+}
