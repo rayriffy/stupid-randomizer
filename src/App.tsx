@@ -34,12 +34,12 @@ export const App: FunctionComponent = memo(props => {
           audio: false,
           video: {
             deviceId: selectedMediaId,
-            width: {
-              ideal: 1920,
-            },
-            height: {
-              ideal: 1080,
-            },
+            // width: {
+            //   ideal: 1920,
+            // },
+            // height: {
+            //   ideal: 1080,
+            // },
           },
         })
         .then(stream => {
@@ -53,7 +53,7 @@ export const App: FunctionComponent = memo(props => {
   const { refetch, ...rest } = useTableFetch(tableCol, tableRow)
 
   return (
-    <main className="w-screen h-screen relative">
+    <main className="w-screen h-screen relative overflow-hidden">
       <div className="absolute top-4 left-4 py-4 px-6 rounded-lg bg-white font-mono z-50 w-52">
         <h1 className="font-bold">Controls</h1>
         <h2 className="font-semibold text-sm mt-1">Table</h2>
@@ -124,6 +124,7 @@ export const App: FunctionComponent = memo(props => {
         id="video-stream"
         className="object-cover pointer-events-none select-none w-full h-full"
       ></video>
+      {/* change from <video /> to <img /> below if you don't have a carpet */}
       {/* <img className='object-cover pointer-events-none select-none w-full h-full' src="/DSC02360.jpg" /> */}
     </main>
   )
